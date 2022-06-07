@@ -5,7 +5,8 @@ from bot.helper.ext_utils.bot_utils import new_thread
 from bot.helper.telegram_helper.filters import CustomFilters
 from bot.helper.telegram_helper.message_utils import sendMessage, deleteMessage, sendMarkup
 from bot.helper.telegram_helper import button_builder
-from bot.helper.ext_utils.parser import get_gp_link
+from bot.helper.parser import get_gp_link
+from bot.helper.parser import get_gp_link
 
 @new_thread
 def scrape_gp(update, context):
