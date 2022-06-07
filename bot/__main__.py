@@ -31,8 +31,8 @@ botcmds = [(f'{BotCommands.ListCommand}','Search files in My Drive')]
 def main():
     bot.set_my_commands(botcmds)
     kie = datetime.now(pytz.timezone('Asia/Kolkata'))
-    jam = kie.strftime('\n📅 𝘿𝘼𝙏𝙀: %d/%m/%Y\n⏲️ 𝙏𝙄𝙈𝙀: %I:%M%P')
-    text = f"<b>✨𝐁𝐨𝐭 𝐑𝐞𝐬𝐭𝐚𝐫𝐭𝐞𝐝✨\n{jam}\n\nɪ'ᴍ ᴘᴍ ᴅʀɪᴠᴇ sᴇᴀʀᴄʜ ʙᴏᴛ</b>"
+    jam = kie.strftime('\n📅 𝗗𝗮𝘁𝗲: %d/%m/%Y\n⏲️ 𝗧𝗶𝗺𝗲: %I:%M%P')
+    text = f"<b>𝐁𝐎𝐓 𝐑𝐄𝐒𝐓𝐀𝐑𝐓𝐄𝐃 ⚡️\n{jam}\n\nɪ'ᴍ ᴘʀɪᴍᴇ ᴅʀɪᴠᴇ sᴇᴀʀᴄʜ ʙᴏᴛ</b>"
     bot.sendMessage(chat_id=OWNER_ID, text=text, parse_mode=ParseMode.HTML)
     if AUTHORIZED_CHATS:
         for i in AUTHORIZED_CHATS:
