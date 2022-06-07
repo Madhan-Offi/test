@@ -5,7 +5,6 @@ from bot.helper.telegram_helper.filters import CustomFilters
 from bot.helper.telegram_helper.message_utils import sendMessage, deleteMessage, sendMarkup
 from bot.helper.telegram_helper import button_builder
 from bot.helper.parser import get_gp_link
-from bot.helper.parser import droplink_bypass
 
 
 def scrape_gp(update, context):
@@ -26,11 +25,6 @@ def scrape_gp(update, context):
     m = sendMessage('<b>Please wait a sec...🙇🏻  \nDont give another task 🙅 </b>', context.bot, update)
     link = get_gp_link(query)
     deleteMessage(context.bot, m)
-    
-    m = sendMessage('<b>Please wait a sec...🙇🏻  \nDont give another task 🙅 </b>', context.bot, update)
-    link = droplink_bypass(query)
-    deleteMessage(context.bot, m)
-
     if not link:      
        sendMessage("Something went wrong\nTry again later..🥺 ", context.bot, update)
     else:
@@ -43,7 +37,3 @@ def scrape_gp(update, context):
 gplink_handler = CommandHandler("scrape", scrape_gp,
                                filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
 dispatcher.add_handler(gplink_handler)
-
-droplink_handler = CommandHandler("scrape", scrape_drop,
-                               filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
-dispatcher.add_handler(droplink_handler)
