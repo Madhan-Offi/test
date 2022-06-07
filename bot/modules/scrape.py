@@ -7,7 +7,7 @@ from bot.helper.telegram_helper import button_builder
 from bot.helper.parser import get_gp_link
 from bot.helper.parser import droplink_bypass
 
-@new_thread
+
 def scrape_gp(update, context):
     buttons = button_builder.ButtonMaker()
     buttons.buildbutton("❤️‍🔥 JNS BOTS ❤️‍🔥", "https://t.me/JNS_BOTS")
