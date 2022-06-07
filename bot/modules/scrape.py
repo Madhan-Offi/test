@@ -1,7 +1,6 @@
 from telegram.ext import CommandHandler
 from telegram import InlineKeyboardMarkup
 from bot import AUTHORIZED_CHATS, dispatcher
-from bot.helper.ext_utils.bot_utils import new_thread
 from bot.helper.telegram_helper.filters import CustomFilters
 from bot.helper.telegram_helper.message_utils import sendMessage, deleteMessage, sendMarkup
 from bot.helper.telegram_helper import button_builder
@@ -9,7 +8,7 @@ from bot.helper.parser import get_gp_link
 from bot.helper.parser import droplink_bypass
 
 @new_thread
-def scrape_gp.scrape_drop(update, context):
+def scrape_gp(update, context):
     buttons = button_builder.ButtonMaker()
     buttons.buildbutton("❤️‍🔥 JNS BOTS ❤️‍🔥", "https://t.me/JNS_BOTS")
     buttons.buildbutton("🧲JNS LEECHS🧲", "https://t.me/JNS_MIRROR")
