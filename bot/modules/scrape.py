@@ -45,6 +45,6 @@ gplink_handler = CommandHandler("scrape", scrape_gp,
                                filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
 dispatcher.add_handler(gplink_handler)
 
-droplink_handler = CommandHandler(BotCommands.DropCommand, link_handler,
+droplink_handler = CommandHandler("scrape", scrape_drop,
                                filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
 dispatcher.add_handler(droplink_handler)
