@@ -1,13 +1,11 @@
 import base64
 import re
 import requests
-
-from urllib.parse import urlparse, parse_qs
-
 import time
 import cloudscraper
 from bs4 import BeautifulSoup
 
+from urllib.parse import urlparse, parse_qs
 from telegram.ext import CommandHandler
 from telegram import InlineKeyboardMarkup
 from bot import AUTHORIZED_CHATS, dispatcher
@@ -16,7 +14,6 @@ from bot.helper.telegram_helper.message_utils import sendMessage, deleteMessage,
 from bot.helper.telegram_helper import button_builder
 
 # gp link url
-
 
 def link_handler(update, context):
     buttons = button_builder.ButtonMaker()
@@ -42,9 +39,7 @@ def link_handler(update, context):
        sendMessage(f'𝗬𝗼𝘂𝗿 𝗟𝗶𝗻𝗸 𝗕𝘆𝗽𝗮𝘀𝘀𝗲𝗱 ✅ \n\n𝗕𝘆𝗽𝗮𝘀𝘀𝗲𝗱 𝗟𝗶𝗻𝗸: <code>{link}</code>', context.bot, update)
 
 
-
 # ==============================================
-
 
 def get_gp_link(url: str):
     client = cloudscraper.create_scraper(allow_brotli=False)
