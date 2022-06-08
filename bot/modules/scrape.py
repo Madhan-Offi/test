@@ -9,7 +9,7 @@ from bot.helper.parser import get_gp_link
 
 def scrape_gp(update, context):
     buttons = button_builder.ButtonMaker()
-    buttons.buildbutton("ᴘʀɪᴍᴇ ʙᴏᴛs", "https://t.me/prime_botz")
+    buttons.buildbutton("ᴘʀɪᴍᴇ ʙᴏᴛs", "https://t.me/prime_Botz")
     buttons.buildbutton("ᴊᴏɪɴ", "https://t.me/PrimexCloud")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(1))
     try:
@@ -19,10 +19,10 @@ def scrape_gp(update, context):
        return
  
     if not query.startswith("https://gplinks") or query.startswith("gplinks"):
-       sendMessage('<b>Sorry 😔, <i>scrape only for GPLinks</i> 😇</b>', context.bot, update)
+       sendMessage('<b>Sorry 🤐 , <i>scrape only for GPLinks URLs. \nYou can use clone for GDrive, GdTot, AppDrive URLs</i> 🤠</b>', context.bot, update)
        return
 
-    m = sendMessage('<b>Please wait a sec... \nDont give another task </b>', context.bot, update)
+    m = sendMessage('<b>Please wait a sec...🙇🏻  \nDont give another task 🙅 </b>', context.bot, update)
     link = get_gp_link(query)
     deleteMessage(context.bot, m)
     if not link:      
@@ -30,10 +30,11 @@ def scrape_gp(update, context):
     else:
        buttons = button_builder.ButtonMaker()
        buttons.buildbutton("ʙʏᴘᴀssᴇᴅ ʟɪɴᴋ", link)
-       buttons.buildbutton("ᴘʀɪᴍᴇ ʙᴏᴛs", "https://t.me/Prime_BotZ")
+       buttons.buildbutton("ᴘʀɪᴍᴇ ʙᴏᴛs", "https://t.me/prime_botz")
        reply_markup = InlineKeyboardMarkup(buttons.build_menu(1))
-       sendMarkup(f"<b>Thank you for using me 💫 \n\nHere is your direct link</b>", context.bot, update, reply_markup)
+       sendMarkup(f"<b>Thank you for using me 💫 \n\nHere is your direct link 👇</b>", context.bot, update, reply_markup)
 
 gplink_handler = CommandHandler("scrape", scrape_gp,
                                filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
 dispatcher.add_handler(gplink_handler)
+
