@@ -12,7 +12,6 @@ from bot import AUTHORIZED_CHATS, dispatcher
 from bot.helper.telegram_helper.filters import CustomFilters
 from bot.helper.telegram_helper.message_utils import sendMessage, deleteMessage, sendMarkup
 from bot.helper.telegram_helper import button_builder
-from bot.helper.telegram_helper.bot_commands import
 
 
 # gp link url
