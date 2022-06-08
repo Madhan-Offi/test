@@ -44,8 +44,8 @@ def sendPrivate(text: str, bot, update: Update, reply_markup: InlineKeyboardMark
         if "Forbidden" in str(e):
             uname = f'<a href="tg://user?id={update.message.from_user.id}">{update.message.from_user.first_name}</a>'
             keyboard = [
-            [InlineKeyboardButton("𝐒𝐓𝐀𝐑𝐓 𝐌𝐄", url = "http://t.me/PM_DriveBot?start=start")],
-            [InlineKeyboardButton("𝐉𝐎𝐈𝐍 𝐇𝐄𝐑𝐄", url = "https://t.me/PM_Bots")]]
+            [InlineKeyboardButton("Start Me", url = "http://t.me/PrimeXSearchBoT?start=start")],
+            [InlineKeyboardButton("Join Here", url = "https://t.me/Prime_BotZ")]]
             sendMarkup(f"<b>ʜᴇʏ {uname}, ʏᴏᴜ ʜᴀᴠᴇɴ'ᴛ sᴛᴀʀᴛᴇᴅ ᴍᴇ ɪɴ ᴘᴍ (ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ) ʏᴇᴛ👀.</b>\n\n𝐅𝐑𝐎𝐌 𝐍𝐎𝐖 𝐎𝐍 𝐈 𝐖𝐈𝐋𝐋 𝐆𝐈𝐕𝐄 𝐋𝐈𝐍𝐊 𝐈𝐍 𝐏𝐌 (𝐏𝐑𝐈𝐕𝐀𝐓𝐄 𝐂𝐇𝐀𝐓) 𝐎𝐍𝐋𝐘 😁", bot, update, reply_markup=InlineKeyboardMarkup(keyboard))
             return        
 
