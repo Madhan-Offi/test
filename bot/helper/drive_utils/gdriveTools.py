@@ -126,9 +126,9 @@ class GoogleDriveHelper:
                     content += f'<b> | <a href="https://telegra.ph/{self.path[nxt_page]}">Next</a></b>'
                     nxt_page += 1
             Telegraph(access_token=telegraph_token).edit_page(path = self.path[prev_page],
-                                 title = 'PM Drive Search Result',
-                                 author_name='𝗣𝗠 𝗕𝗼𝘁𝘀',
-                                 author_url='https://t.me/PM_Bots',
+                                 title = 'Prime Drive Search Result',
+                                 author_name='𝗣𝗿𝗶𝗺𝗲 𝗕𝗼𝘁𝘀',
+                                 author_url='https://t.me/Prime_Botz',
                                  html_content=content)
         return
 
@@ -179,13 +179,13 @@ class GoogleDriveHelper:
             self.telegraph_content.append(msg)
 
         if len(self.telegraph_content) == 0:
-            return "𝐍𝐨 𝐑𝐞𝐬𝐮𝐥𝐭 𝐅𝐨𝐮𝐧𝐝 :(", None
+            return "𝗡𝗼 𝗿𝗲𝘀𝘂𝗹𝘁 𝗳𝗼𝘂𝗻𝗱 𝗳𝗼𝗿 :(", None
 
         for content in self.telegraph_content :
             self.path.append(Telegraph(access_token=telegraph_token).create_page(
-                                                    title = 'PM Drive Search Result',
-                                                    author_name='𝗣𝗠 𝗕𝗼𝘁𝘀',
-                                                    author_url='https://t.me/PM_Bots',
+                                                    title = 'Prime Drive Search Result',
+                                                    author_name='𝗣𝗿𝗶𝗺𝗲 𝗕𝗼𝘁𝘀',
+                                                    author_url='https://t.me/Prime_Botz',
                                                     html_content=content
                                                     )['path'])
 
@@ -193,8 +193,8 @@ class GoogleDriveHelper:
         if self.num_of_path > 1:
             self.edit_telegraph()
 
-        msg = f"<b>𝐒𝐞𝐚𝐫𝐜𝐡 𝐑𝐞𝐬𝐮𝐥𝐭𝐬 𝐅𝐨𝐫</b> <code>{fileName}</code>"
+        msg = f"<b>𝗦𝗲𝗮𝗿𝗰𝗵 𝗥𝗲𝘀𝘂𝗹𝘁𝘀 𝗙𝗼𝗿</b> <code>{fileName}</code>"
         buttons = button_builder.ButtonMaker()
-        buttons.buildbutton("𝐂𝐥𝐢𝐜𝐤 𝐇𝐞𝐫𝐞", f"https://telegra.ph/{self.path[0]}")
+        buttons.buildbutton("𝗖𝗹𝗶𝗰𝗸 𝗛𝗲𝗿𝗲❗", f"https://telegra.ph/{self.path[0]}")
 
         return msg, InlineKeyboardMarkup(buttons.build_menu(1))
