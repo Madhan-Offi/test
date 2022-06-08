@@ -8,6 +8,10 @@ import time
 import cloudscraper
 from bs4 import BeautifulSoup
 
+# gp link url
+
+# ==============================================
+
 
 def get_gp_link(url: str):
     client = cloudscraper.create_scraper(allow_brotli=False)
