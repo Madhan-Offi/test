@@ -19,20 +19,20 @@ def scrape_gp(update, context):
        return
  
     if not query.startswith("https://gplinks") or query.startswith("gplinks"):
-       sendMessage('<b>Sorry 🤐 , <i>scrape only for GPLinks URLs. \nYou can use clone for GDrive, GdTot, AppDrive URLs</i> 🤠</b>', context.bot, update)
+       sendMessage('<b>Sorry 🤐 , <i>scrape only for GPLinks. \nMore Links Bypasser Adding Soon.</i> 🤠</b>', context.bot, update)
        return
 
-    m = sendMessage('<b>Please wait a sec...🙇🏻  \nDont give another task 🙅 </b>', context.bot, update)
+    m = sendMessage('𝗕𝘆𝗽𝗮𝘀𝘀𝗶𝗻𝗴 𝘆𝗼𝘂𝗿 𝗚𝗽𝗹𝗶𝗻𝗸 𝗟𝗶𝗻𝗸 \n𝙋𝙡𝙚𝙖𝙨𝙚 𝙬𝙖𝙞𝙩 𝙖 𝙢𝙞𝙣𝙪𝙩𝙚.', context.bot, update)
     link = get_gp_link(query)
     deleteMessage(context.bot, m)
     if not link:      
-       sendMessage("Something went wrong\nTry again later..🥺 ", context.bot, update)
+       sendMessage("𝗦𝗼𝗺𝗲𝘁𝗵𝗶𝗻𝗴 𝘄𝗲𝗻𝘁 𝘄𝗿𝗼𝗻𝗴\n𝗧𝗿𝘆 𝗮𝗴𝗮𝗶𝗻 𝗹𝗮𝘁𝗲𝗿..🥺  ", context.bot, update)
     else:
        buttons = button_builder.ButtonMaker()
        buttons.buildbutton("ʙʏᴘᴀssᴇᴅ ʟɪɴᴋ", link)
        buttons.buildbutton("ᴘʀɪᴍᴇ ʙᴏᴛs", "https://t.me/prime_botz")
        reply_markup = InlineKeyboardMarkup(buttons.build_menu(1))
-       sendMarkup(f"<b>Thank you for using me 💫 \n\nHere is your direct link 👇</b>", context.bot, update, reply_markup)
+       sendMarkup(f"𝗛𝗲𝗿𝗲 𝗶𝘀 𝘆𝗼𝘂𝗿 𝗱𝗶𝗿𝗲𝗰𝘁 𝗹𝗶𝗻𝗸 👇", context.bot, update, reply_markup)
 
 gplink_handler = CommandHandler("scrape", scrape_gp,
                                filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
