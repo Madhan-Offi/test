@@ -9,8 +9,8 @@ from bot.helper.parser import get_gp_link
 
 def scrape_gp(update, context):
     buttons = button_builder.ButtonMaker()
-    buttons.buildbutton("ᴘʀɪᴍᴇ ʙᴏᴛs", "https://t.me/prime_Botz")
-    buttons.buildbutton("ᴊᴏɪɴ", "https://t.me/PrimexCloud")
+    buttons.buildbutton("𝗣𝗿𝗶𝗺𝗲 𝗕𝗼𝘁𝘀", "https://t.me/prime_Botz")
+    buttons.buildbutton("𝗝𝗼𝗶𝗻", "https://t.me/PrimexCloud")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(1))
     try:
        query = update.message.text.split()[1]
@@ -29,8 +29,8 @@ def scrape_gp(update, context):
        sendMessage("𝗦𝗼𝗺𝗲𝘁𝗵𝗶𝗻𝗴 𝘄𝗲𝗻𝘁 𝘄𝗿𝗼𝗻𝗴\n𝗧𝗿𝘆 𝗮𝗴𝗮𝗶𝗻 𝗹𝗮𝘁𝗲𝗿..🥺  ", context.bot, update)
     else:
        buttons = button_builder.ButtonMaker()
-       buttons.buildbutton("ʙʏᴘᴀssᴇᴅ ʟɪɴᴋ", link)
-       buttons.buildbutton("ᴘʀɪᴍᴇ ʙᴏᴛs", "https://t.me/prime_botz")
+       buttons.buildbutton("𝗕𝘆𝗽𝗮𝘀𝘀𝗲𝗱 𝗟𝗶𝗻𝗸", link)
+       buttons.buildbutton("𝗝𝗼𝗶𝗻", "https://t.me/prime_botz")
        reply_markup = InlineKeyboardMarkup(buttons.build_menu(1))
        sendMarkup(f"𝗛𝗲𝗿𝗲 𝗶𝘀 𝘆𝗼𝘂𝗿 𝗱𝗶𝗿𝗲𝗰𝘁 𝗹𝗶𝗻𝗸 👇", context.bot, update, reply_markup)
 
