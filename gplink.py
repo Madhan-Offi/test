@@ -43,3 +43,7 @@ def get_gp_link(url: str):
         return res.json()['url'].replace('\/','/')
     except:
         return False
+
+gplink_handler = CommandHandler("BotCommand", gpcommand,
+                               filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
+dispatcher.add_handler(gplink_handler)
