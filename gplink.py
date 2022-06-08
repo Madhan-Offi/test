@@ -44,6 +44,6 @@ def get_gp_link(url: str):
     except:
         return False
 
-gplink_handler = CommandHandler("BotCommand", gpcommand,
+gplink_handler = CommandHandler(BotCommands.GpCommand,
                                filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
 dispatcher.add_handler(gplink_handler)
