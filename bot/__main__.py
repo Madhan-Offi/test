@@ -10,7 +10,7 @@ from bot.helper.telegram_helper.bot_commands import BotCommands
 from bot.helper.telegram_helper.message_utils import *
 from .helper.telegram_helper.filters import CustomFilters
 from .modules import authorize, list
-from bot.modules import scrape
+from bot.modules import gplink
 
 
 def start(update, context):
